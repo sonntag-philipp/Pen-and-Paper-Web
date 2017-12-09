@@ -13,6 +13,7 @@ import {ToolbarService} from "./toolbar/toolbar.service";
 import {DialogsModule} from "./modules/dialogs/dialogs.module";
 import {MessageDialogComponent} from "./modules/dialogs/message-dialog/message-dialog.component";
 import {ModeratorModule} from "./modules/moderator/moderator.module";
+import {ConfirmationDialogComponent} from "./modules/dialogs/confirmation-dialog/confirmation-dialog.component";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {ModeratorModule} from "./modules/moderator/moderator.module";
     ToolbarService
   ],
   entryComponents: [
-    MessageDialogComponent
+    MessageDialogComponent,
+    ConfirmationDialogComponent
   ],
   bootstrap: [AppComponent]
 })

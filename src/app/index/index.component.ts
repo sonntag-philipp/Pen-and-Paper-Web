@@ -21,7 +21,6 @@ export class IndexComponent implements OnInit {
 
   public onBtnRegister(): void {
     this.dialog.open(MessageDialogComponent, {
-      width: "400px",
       data: {
         title: "Registrierung",
         message: "Die Registrierung ist leider noch nicht möglich. Wende dich dafür bitte an einen Admin von Delaiyoid.de"

@@ -2,7 +2,7 @@
 
 <mat-toolbar color="primary">
   <!--
-    Toolbar just to make the padding right. I know, but this is the easiest and
+    Toolbar just to make the spacing right. I know, but this is the easiest and
     fastest way. ¯\_(ツ)_/¯
   -->
 </mat-toolbar>
@@ -11,8 +11,8 @@
 <!--
   Outlet for the routes defined in app-routing module.
 -->
-<div class="router-outlet" fxLayout="row" fxLayoutAlign="center">
+<div style="margin-top: 2%; margin-bottom: 4%;" fxLayout="row" fxLayoutAlign="center">
   <div fxFlex="60">
-    <router-outlet style="width: 100%; height: 100%;"></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 </div>
