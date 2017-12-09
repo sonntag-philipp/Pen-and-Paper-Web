@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material";
 import {MessageDialogComponent} from "../modules/dialogs/message-dialog/message-dialog.component";
+import {ToolbarService} from "../toolbar/toolbar.service";
 
 @Component({
   selector: 'app-index',
@@ -10,10 +11,12 @@ import {MessageDialogComponent} from "../modules/dialogs/message-dialog/message-
 export class IndexComponent implements OnInit {
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private toolbarService: ToolbarService
   ) { }
 
   ngOnInit() {
+    this.toolbarService.title = "Pen and Paper Web"
   }
 
   public onBtnRegister(): void {

@@ -12,6 +12,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import {ToolbarService} from "./toolbar/toolbar.service";
 import {DialogsModule} from "./modules/dialogs/dialogs.module";
 import {MessageDialogComponent} from "./modules/dialogs/message-dialog/message-dialog.component";
+import {ModeratorModule} from "./modules/moderator/moderator.module";
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {MessageDialogComponent} from "./modules/dialogs/message-dialog/message-d
   imports: [
     AppRoutingModule,
     DialogsModule,
+    ModeratorModule,
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
