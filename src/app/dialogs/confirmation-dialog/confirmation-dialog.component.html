@@ -1,0 +1,12 @@
+<div mat-dialog-title>
+  {{ data.title }}
+</div>
+<div mat-dialog-content>
+  <p>
+    {{ data.message }}
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button (click)="onBtnResume();" mat-button color="warn">Weiter</button>
+  <button mat-button mat-dialog-close>Abbrechen</button>
+</div>
