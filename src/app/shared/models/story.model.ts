@@ -1,9 +1,8 @@
-import {CharacterModel} from "./character.model";
+import {CharModel} from "./char.model";
 
-export class StoryModel {
+export interface StoryModel {
+  id: string;
+  name: string;
 
-  public name: string;
-
-
-  public characters: CharacterModel[];
+  characters: CharModel[];
 }

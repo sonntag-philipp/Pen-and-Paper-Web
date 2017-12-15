@@ -1,8 +1,6 @@
 import {Injectable} from "@angular/core";
 
 @Injectable()
-export class ToolbarService {
+export class CharsService {
 
-  public title: string;
 }
-

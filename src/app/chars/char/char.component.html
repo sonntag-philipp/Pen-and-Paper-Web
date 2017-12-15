@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>
+    {{ char?.name }}
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{ char?.description }}
+  </mat-card-subtitle>
+  <mat-card-content>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button [routerLink]="['edit']" mat-button color="accent">Bearbeiten</button>
+    <div fxFlex="auto"></div>
+    <button (click)="onBtnDelete()" mat-raised-button color="warn">Entfernen</button>
+  </mat-card-actions>
+</mat-card>

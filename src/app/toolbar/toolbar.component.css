@@ -1,5 +1,16 @@
-mat-toolbar {
+.toolbar-container {
   position: fixed;
   top: 0;
   z-index: 2;
+}
+
+.toolbar-icon {
+  border: none;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.route-item {
+  text-decoration: none;
+  color: white;
 }

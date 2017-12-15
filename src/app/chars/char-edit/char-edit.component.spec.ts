@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModeratorHomeComponent } from './moderator-home.component';
+import { CharEditComponent } from './char-edit.component';
 
-describe('ModeratorHomeComponent', () => {
-  let component: ModeratorHomeComponent;
-  let fixture: ComponentFixture<ModeratorHomeComponent>;
+describe('CharEditComponent', () => {
+  let component: CharEditComponent;
+  let fixture: ComponentFixture<CharEditComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModeratorHomeComponent ]
+      declarations: [ CharEditComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModeratorHomeComponent);
+    fixture = TestBed.createComponent(CharEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -10,25 +10,46 @@ import { IndexComponent } from './index/index.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import {ToolbarService} from "./toolbar/toolbar.service";
-import {DialogsModule} from "./modules/dialogs/dialogs.module";
-import {MessageDialogComponent} from "./modules/dialogs/message-dialog/message-dialog.component";
-import {ModeratorModule} from "./modules/moderator/moderator.module";
-import {ConfirmationDialogComponent} from "./modules/dialogs/confirmation-dialog/confirmation-dialog.component";
+import {DialogsModule} from "./dialogs/dialogs.module";
+import {MessageDialogComponent} from "./dialogs/message-dialog/message-dialog.component";
+import {ConfirmationDialogComponent} from "./dialogs/confirmation-dialog/confirmation-dialog.component";
+import {AngularFirestoreModule} from "angularfire2/firestore";
+import {AngularFireAuthModule} from "angularfire2/auth";
+import {AppFirebaseModule} from "./app-firebase.module";
+import {CharsComponent} from "./chars/chars.component";
+import {CharComponent} from "./chars/char/char.component";
+import {CharEditComponent} from "./chars/char-edit/char-edit.component";
+import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
+import {InputDialogComponent} from "./dialogs/input-dialog/input-dialog.component";
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ErrorPageComponent,
+    CharsComponent,
+    CharComponent,
+    CharEditComponent
   ],
   imports: [
-    AppRoutingModule,
-    DialogsModule,
-    ModeratorModule,
+    // Other Modules
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+
+    // Local Modules
+    AppFirebaseModule,
+    AppRoutingModule,
+    DialogsModule,
+
+    // Firebase Imports
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+
+    // Material Design imports
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
@@ -39,7 +60,8 @@ import {ConfirmationDialogComponent} from "./modules/dialogs/confirmation-dialog
   ],
   entryComponents: [
     MessageDialogComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    InputDialogComponent
   ],
   bootstrap: [AppComponent]
 })

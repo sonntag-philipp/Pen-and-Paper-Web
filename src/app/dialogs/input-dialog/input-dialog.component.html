@@ -1,0 +1,18 @@
+<div style="padding: -24px;">
+  <h3 style="margin-bottom: 0.0%;" md-dialog-title>{{ data.title }}</h3>
+  <p style="margin-top: 0.5%;">{{ data.text }}</p>
+  <mat-dialog-content>
+    <mat-form-field *ngFor="let item of data.inputs">
+      <input matInput [(ngModel)]="item.value" placeholder="{{ item.name }}:" type="{{ getType(item) }}">
+    </mat-form-field>
+    <mat-checkbox *ngFor="let item of data.checkboxes" [(ngModel)]="item.checked">{{ item.name }}</mat-checkbox>
+    <div *ngIf="data.radiogroups !== undefined">
+      <mat-radio-group *ngFor="let radiogroup of data.radiogroups" [(ngModel)]="radiogroup.value">
+        <mat-radio-button *ngFor="let button of radiogroup" value="{{ button.name }}">{{ button.name }}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button color="accent" *ngFor="let item of data.buttons" (click)="onBtnClick(item);">{{ item.name }}</button>
+  </mat-dialog-actions>
+</div>

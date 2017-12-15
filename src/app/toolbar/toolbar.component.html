@@ -1,10 +1,9 @@
-<mat-toolbar color="primary">
-  <a routerLink="/" style="text-decoration: none; color: white;">
-    <span>{{ toolbarService.title }}</span>
-  </a>
+<mat-toolbar color="primary" class="toolbar-container">
+  <img class="toolbar-icon" [routerLink]="['/']" src="https://phildev.me/pnp-icon.png" alt="PnP">
+  <span>
+    {{ toolbarService.title }}
+  </span>
+
 
   <div fxLayout="row" fxFlex="auto"></div>
-
-
-  <button mat-raised-button color="warn">Neue Story</button>
 </mat-toolbar>
