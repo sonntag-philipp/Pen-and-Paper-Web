@@ -1,74 +1,16 @@
-<mat-card>
-  <mat-card-title>
-    Herzlich Willkommen!
-  </mat-card-title>
-  <mat-card-subtitle>
-    Viel Spaß beim Spielen
-  </mat-card-subtitle>
-  <mat-card-content>
+<div *ngIf="fireAuth.authState | async; else showPublic">
+  <mat-card class="index-card">
+    <mat-card-title>
+      Herzlich Willkommen, {{ fireAuth.auth?.currentUser.displayName }}
+    </mat-card-title>
+  </mat-card>
+</div>
+<ng-template #showPublic>
+  <mat-card class="index-card">
+    <mat-card-content fxLayout="column" fxLayoutAlign="start center">
 
-    <div *ngIf="afAuth.authState | async; let user; else showLogin">
-      <h1>Hello {{ user.displayName }}!</h1>
-      <button (click)="logout()">Logout</button>
-    </div>
-    <ng-template #showLogin>
-      <p>Please login.</p>
-      <button (click)="login()">Login with Google</button>
-    </ng-template>
-
-
-
-
-
-
-  <!--
-    <mat-card fxFlex="48" style="background-color: #ff9999;">
-      <mat-card-title>
-        Moderator
-      </mat-card-title>
-      <mat-card-content>
-        <table style="width: 100%;">
-          <tr>
-            <td style="width: 50%;">
-              <mat-form-field style="font-size: 12pt; width: 95%;">
-                <input matInput type="text" placeholder="Name">
-              </mat-form-field>
-            </td>
-            <td style="width: 50%;">
-              <mat-form-field style="font-size: 12pt; width: 95%;">
-                <input matInput type="password" placeholder="Passwort">
-              </mat-form-field>
-            </td>
-          </tr>
-        </table>
-      </mat-card-content>
-      <mat-card-actions>
-        <button routerLink="/moderator" mat-button color="primary">Anmelden</button>
-        <button (click)="onBtnRegister();" mat-button color="primary">Registrieren</button>
-      </mat-card-actions>
-    </mat-card>
-
-    <div fxFlex="4"></div>
-
-    <mat-card fxFlex="48" style="background-color: #80ff80;">
-      <mat-card-title>
-        Spieler
-      </mat-card-title>
-      <mat-card-content>
-        <table style="width: 100%;">
-          <tr>
-            <td style="width: 50%;">
-              <mat-form-field style="font-size: 12pt; width: 90%;">
-                <input matInput type="text" placeholder="Story-ID">
-              </mat-form-field>
-            </td>
-          </tr>
-        </table>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button color="primary">Beitreten</button>
-      </mat-card-actions>
-    </mat-card>-->
-
-  </mat-card-content>
-</mat-card>
+      <h1 fxFlex style="text-align: center; font-size: 30pt;">Pen and Paper - Web</h1>
+      <img src="https://phildev.me/pnp-logo.png">
+    </mat-card-content>
+  </mat-card>
+</ng-template>

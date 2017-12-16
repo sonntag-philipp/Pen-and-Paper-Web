@@ -6,4 +6,13 @@
 
 
   <div fxLayout="row" fxFlex="auto"></div>
+
+
+
+  <div *ngIf="fireAuth.authState | async; else showLogin">
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+  </div>
+  <ng-template #showLogin>
+    <button mat-raised-button color="warn" (click)="onBtnLogin()">Anmelden</button>
+  </ng-template>
 </mat-toolbar>
