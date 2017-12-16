@@ -1,4 +1,4 @@
-export interface CharStatusModel {
+export class CharStatusModel {
   name: string;
   strength: number;
 }

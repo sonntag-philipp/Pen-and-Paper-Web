@@ -1,6 +1,6 @@
 import {CharStatusModel} from "./char-status.model";
 
-export interface CharItemModel {
+export class CharItemModel {
   name: string;
   equipped: boolean;
 

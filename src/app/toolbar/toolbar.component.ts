@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ToolbarService} from "./toolbar.service";
 import {AngularFireAuth} from "angularfire2/auth";
 import * as firebase from "firebase";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -12,7 +13,8 @@ export class ToolbarComponent implements OnInit {
 
   constructor(
     public toolbarService: ToolbarService,
-    private fireAuth: AngularFireAuth
+    public fireAuth: AngularFireAuth,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class ToolbarComponent implements OnInit {
   }
 
   public onBtnLogout(): void {
+    this.router.navigate(['/']);
     this.fireAuth.auth.signOut();
   }
 

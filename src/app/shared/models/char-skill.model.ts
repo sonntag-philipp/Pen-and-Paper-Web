@@ -1,4 +1,4 @@
-export interface CharSkillModel {
+export class CharSkillModel {
   property: string;
   experience: number;
 }

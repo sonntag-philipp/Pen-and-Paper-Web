@@ -23,7 +23,7 @@ export class CharComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.db.collection('chars').doc<CharModel>(this.route.snapshot.paramMap.get('id')).valueChanges().subscribe(
+    this.db.collection('characters').doc<CharModel>(this.route.snapshot.paramMap.get('id')).valueChanges().subscribe(
       (next) => {
         this.char = next;
       },

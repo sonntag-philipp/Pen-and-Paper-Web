@@ -1,6 +1,6 @@
 import {CharModel} from "./char.model";
 
-export interface StoryModel {
+export class StoryModel {
   id: string;
   name: string;
   title: string;

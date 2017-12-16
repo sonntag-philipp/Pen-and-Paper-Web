@@ -11,7 +11,7 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private toolbarService: ToolbarService,
-    private fireAuth: AngularFireAuth
+    public fireAuth: AngularFireAuth
   ) { }
 
   ngOnInit() {
