@@ -4,6 +4,30 @@
       Herzlich Willkommen, {{ fireAuth.auth?.currentUser.displayName }}
     </mat-card-title>
   </mat-card>
+
+  <mat-card class="index-card">
+    <mat-card-title>
+      Stories
+    </mat-card-title>
+    <mat-card-subtitle>
+      Hier kannst du deine gespeicherten Geschichten wiederfinden.
+    </mat-card-subtitle>
+    <mat-card-actions>
+      <button [routerLink]="['/stories']" mat-button color="accent">Story-Bibliothek</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="index-card">
+    <mat-card-title>
+      Charaktere
+    </mat-card-title>
+    <mat-card-subtitle>
+      Deine gespeicherten Charaktere findest du hier wieder.
+    </mat-card-subtitle>
+    <mat-card-actions>
+      <button [routerLink]="['/chars']" mat-button color="accent">Charakter-Bibliothek</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
 <ng-template #showPublic>
   <mat-card class="index-card">

@@ -5,6 +5,9 @@ import {CharComponent} from "./chars/char/char.component";
 import {CharsComponent} from "./chars/chars.component";
 import {CharEditComponent} from "./chars/char-edit/char-edit.component";
 import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
+import {StoriesComponent} from "./stories/stories.component";
+import {StoryComponent} from "./stories/story/story.component";
+import {StoryEditComponent} from "./stories/story-edit/story-edit.component";
 
 const appRoutes: Routes = [
   {
@@ -12,7 +15,6 @@ const appRoutes: Routes = [
     component: IndexComponent
   },
   {
-    // TODO: Use a resolver
     path: "chars",
     component: CharsComponent
   },
@@ -23,6 +25,18 @@ const appRoutes: Routes = [
   {
     path: "chars/:id/edit",
     component: CharEditComponent
+  },
+  {
+    path: "stories",
+    component: StoriesComponent
+  },
+  {
+    path: "stories/:id",
+    component: StoryComponent
+  },
+  {
+    path: "stories/:id/edit",
+    component: StoryEditComponent
   },
   {
     path: "**",

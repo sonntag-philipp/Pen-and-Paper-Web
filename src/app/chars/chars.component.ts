@@ -21,19 +21,7 @@ export class CharsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.tb.title = "Charakterbibliothek";
-
-    this.db.collection('chars').doc<CharModel>("0Vj9tGtzQCbimQhWmVBC").valueChanges().subscribe(
-      (next) => {
-        this.chars.push(next);
-      },
-      (error) => {
-        console.error(error);
-      },
-      () => {
-        console.log("Feddich");
-      },
-    );
+    this.tb.title = "Charakter-Bibliothek";
   }
 
   public onBtnNewCharacter(): void {

@@ -21,6 +21,9 @@ import {CharComponent} from "./chars/char/char.component";
 import {CharEditComponent} from "./chars/char-edit/char-edit.component";
 import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
 import {InputDialogComponent} from "./dialogs/input-dialog/input-dialog.component";
+import {StoriesComponent} from "./stories/stories.component";
+import {StoryComponent} from "./stories/story/story.component";
+import {StoryEditComponent} from "./stories/story-edit/story-edit.component";
 
 
 
@@ -32,7 +35,10 @@ import {InputDialogComponent} from "./dialogs/input-dialog/input-dialog.componen
     ErrorPageComponent,
     CharsComponent,
     CharComponent,
-    CharEditComponent
+    CharEditComponent,
+    StoriesComponent,
+    StoryComponent,
+    StoryEditComponent
   ],
   imports: [
     // Other Modules
